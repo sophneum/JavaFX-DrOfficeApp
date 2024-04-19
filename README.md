@@ -6,4 +6,4 @@ If you are curious to learn more about the details of this group project, all ph
 https://drive.google.com/drive/folders/1Jtb5YPsN939msRYPKsc4eJ1pKRdQePlI?usp=sharing
 
 Thanks for checking out the project!
-- Sophia Neumann
+\- Sophia Neumann
