@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="root" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.yohealth.controllers.NurseController">
+   <children>
+      <Label layoutX="573.0" layoutY="250.0" text="Add a New Patient" textFill="#ebebeb" style="-fx-font-size: 32px;"/>      
+      <Pane layoutX="193.0" layoutY="338.0" prefHeight="590.0" prefWidth="1060.0" style="-fx-background-color: #71816D;">
+         <children>
+            <TextField fx:id="newPatientName" layoutX="18.0" layoutY="37.0" prefHeight="54.0" prefWidth="467.0" focusTraversable="false" promptText="Full Name" style="-fx-background-color: #C6E2E9; -fx-font-size: 20pt;"/>
+            <TextField fx:id="newPatientDOB" layoutX="534.0" layoutY="37.0" prefHeight="54.0" prefWidth="317.0" focusTraversable="false" promptText="DOB: MM/DD/YYYY" style="-fx-background-color: #C6E2E9; -fx-font-size: 20pt;"/>
+            <TextField fx:id="newPatientMailingAddress" layoutX="19.0" layoutY="102.0" prefHeight="54.0" prefWidth="960.0" focusTraversable="false" promptText="Mailing Address" style="-fx-background-color: #C6E2E9; -fx-font-size: 20pt;"/>
+            <TextField fx:id="newPatientBillingAddress" layoutX="19.0" layoutY="167.0" prefHeight="54.0" prefWidth="960.0" focusTraversable="false" promptText="Billing Address" style="-fx-background-color: #C6E2E9; -fx-font-size: 20pt;"/>
+            <TextField fx:id="newPatientEmail" layoutX="18.0" layoutY="232.0" prefHeight="54.0" prefWidth="467.0" focusTraversable="false" promptText="E-Mail Address" style="-fx-background-color: #C6E2E9; -fx-font-size: 20pt;"/>
+            <TextField fx:id="newPatientPhone" layoutX="534.0" layoutY="232.0" prefHeight="54.0" prefWidth="317.0" focusTraversable="false" promptText="Phone Number" style="-fx-background-color: #C6E2E9; -fx-font-size: 20pt;"/>
+            <TextField fx:id="newPatientInsuranceInfo" layoutX="20.0" layoutY="322.0" prefHeight="54.0" prefWidth="960.0" focusTraversable="false" promptText="Insurance Info and Policy #" style="-fx-background-color: #C6E2E9; -fx-font-size: 20pt;"/>
+            <TextField fx:id="newPatientPharmacyInfo" layoutX="20.0" layoutY="387.0" prefHeight="54.0" prefWidth="960.0" focusTraversable="false" promptText="Pharmacy Name and Address" style="-fx-background-color: #C6E2E9; -fx-font-size: 20pt;"/>
+            <TextField fx:id="newPatientUsername" layoutX="21.0" layoutY="477.0" prefHeight="54.0" prefWidth="467.0" focusTraversable="false" promptText="Username" style="-fx-background-color: #C6E2E9; -fx-font-size: 20pt;"/>
+            <Label layoutX="22.0" layoutY="538.0" text="username format: first 3 letters of first name, full last name, last 2 digits birth year (i.e. sarhillsman89)" style="-fx-text-fill: #EBEBEB;"/>
+            <Button fx:id="addButton" layoutX="863.0" layoutY="477.0" mnemonicParsing="false" onAction="#onAddButtonClicked" prefHeight="54.0" prefWidth="121.0" style="-fx-background-color: #E49273; -fx-text-fill: black; -fx-font-size: 20pt; -fx-font-weight: Bold;" text="Add!"/>
+         </children>
+      </Pane>
+      <Label layoutX="566.0" layoutY="104.0" style="-fx-text-fill: black; -fx-font-size: 36pt;" text="Nurse Portal" />
+      <Button layoutX="1191.0" layoutY="115.0" mnemonicParsing="false" onAction="#onBackButtonClicked" style="-fx-background-color: #71816D; -fx-font-size: 16; -fx-font-weight: Bold;" text="&lt;- Back" />
+      <Button layoutX="1308.0" layoutY="115.0" mnemonicParsing="false" onAction="#onLogoutButtonClicked" style="-fx-background-color: #71816D; -fx-font-weight: Bold; -fx-font-size: 12pt;" text="Logout" />
+   </children>
+</AnchorPane>

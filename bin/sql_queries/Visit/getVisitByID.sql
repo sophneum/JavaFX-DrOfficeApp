@@ -1,0 +1,1 @@
+SELECT * FROM `Visit` WHERE `id` = ? LIMIT 1;

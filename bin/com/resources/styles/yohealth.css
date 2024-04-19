@@ -1,0 +1,27 @@
+/* 
+our color hex codes:
+	--gunmetal: #2F323A;
+	--lightblue: #C6E2E9;
+	--atomictangerine: #E49273;
+	--resedagreen: #71816D;
+	--antiflashwhite: #EBEBEB;
+*/
+
+.root {
+    -fx-background-image: url("../static/background.png");
+    -fx-background-size: cover;
+    -fx-font-family: 'Chakra Petch';
+    -fx-font-weight: bold;
+    -fx-min-width: 1440px;
+    -fx-min-height: 1024px;
+    -fx-max-width: 1440px;
+    -fx-max-height: 1024px;
+    -fx-spacing: 20px;
+    -fx-alignment: center;
+    -fx-fill-width: true;
+    -fx-fill-height: true;
+    -fx-hgap: 20px;
+    -fx-vgap: 20px;
+    -fx-padding: 40px 0;
+    -fx-background-insets: -10;
+}

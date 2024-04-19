@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<HBox fx:id="messageBox" layoutX="20.0" layoutY="21.0" prefWidth="350.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.yohealth.controllers.NurseController">
+                    <VBox layoutX="20.0" layoutY="21.0" HBox.hgrow="ALWAYS">
+                              <children>
+                                 <HBox minHeight="250.0" prefHeight="300.0" prefWidth="200.0">
+                                    <children>
+                                       <VBox minWidth="350.0" prefHeight="200.00" prefWidth="100.0" spacing="15.0">
+                                          <children>
+                                             <HBox prefWidth="200.0" spacing="5">
+                                                <children>
+                                                   <Label translateX="20" translateY ="10" minHeight="30.0" style="-fx-font-size: 20;" text="Subject: " />
+                                                   <TextField translateY="10" fx:id="messageSubjectField" layoutY="10.0" style="-fx-font-size: 15px;" translateX="20.0" text="" />
+                                                </children>
+                                            </HBox>
+                                            <Line endX="241.7928924560547" endY="-1.0355340242385864" startX="-100.0" translateY="10.0" />
+                                            <HBox prefWidth="200.0">
+                                                <children>
+                                                   <TextArea fx:id="messageBody" wrapText="true" minHeight="200.0" prefWidth="400.0" layoutY="10.0" style="-fx-font-size: 15px;" translateX="10.0" />
+                                                </children>
+                                             </HBox>
+                                             <Button  fx:id="backToMessagesButton" scaleX="0.75" scaleY="0.75" translateY= "-10" minWidth="116.0" mnemonicParsing="false" onAction="#onBackToMessagesButtonClicked" prefHeight="51.0" prefWidth="116.0" style="-fx-background-color: #71816D; -fx-font-size: 30; -fx-font-weight: bold; -fx-text-fill: #EBEBEB; -fx-padding: 10px 20px; -fx-alignment: center;" text="Back" />
+                                             <HBox fx:id="sendMessageButtons" prefWidth="200.0" spacing ="10">
+                                                <children>
+                                                    <Button fx:id="sendMessageButton" scaleX="0.75" scaleY="0.75" translateY="-30" minWidth="116.0" mnemonicParsing="false" onAction="#onSendMessagesButtonClicked" prefHeight="51.0" prefWidth="116.0" style="-fx-background-color: #71816D; -fx-font-size: 30; -fx-font-weight: bold; -fx-text-fill: #EBEBEB; -fx-padding: 10px 20px; -fx-alignment: center;" text="Send" />
+                                                    <Label fx:id="messageSuccess" minHeight="30.0" style="-fx-font-size: 20;" text="Message Sent!" visible="false" />
+                                                    <Label maxHeight="10" fx:id="loadingMessages" style="-fx-font-size: 20px;-fx-font-weight: bold;-fx-text-fill: #E49273;" visible="false" text="Loading Messages..." translateX="15"/>
+                                                </children>
+                                            </HBox>
+                                            <Line endX="241.7928924560547" endY="-1.0355340242385864" startX="-100.0" translateY="10.0" />
+                                            
+                                          </children>
+                                       </VBox>
+                                    </children>
+                                 </HBox>
+                              </children>
+                           </VBox>
+                        </HBox>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" spacing="20.0" styleClass="root" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.yohealth.controllers.DoctorController">
+   <HBox alignment="TOP_CENTER" translateY="-35.0">
+      <children>
+         <Label maxHeight="64.0" prefHeight="64.0" prefWidth="1005.0" style="-fx-text-fill: black; -fx-font-size: 48px;" text="Doctor Portal" translateX="90.0" HBox.hgrow="NEVER">
+            <padding>
+               <Insets left="500.0" />
+            </padding>
+            <HBox.margin>
+               <Insets />
+            </HBox.margin>
+         </Label>
+         <Button minHeight="32.0" minWidth="60.0" mnemonicParsing="false" onAction="#onBackButtonClicked" style="-fx-background-color: #71816D; -fx-text-fill: BLACK;" text="&lt;- Back">
+            <HBox.margin>
+               <Insets left="200.0" right="50.0" top="25.0" />
+            </HBox.margin>
+         </Button>
+         <Button layoutX="1114.0" layoutY="10.0" minHeight="32.0" minWidth="60.0" mnemonicParsing="false" onAction="#onLogoutButtonClicked" style="-fx-background-color: #71816D; -fx-text-fill: BLACK;" text="Logout">
+            <HBox.margin>
+               <Insets top="25.0" right="25.0"/>
+            </HBox.margin>
+         </Button>
+      </children>
+      <VBox.margin>
+         <Insets />
+      </VBox.margin>
+      <padding>
+         <Insets right="15.0" />
+      </padding>
+   </HBox>
+   <HBox fx:id="searchBarBox" alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="150.0" translateY="20.0">
+      <children>
+         <TextField fx:id="enterText" alignment="CENTER" editable="true" maxHeight="60.0" maxWidth="350.0" minWidth="350.0" pickOnBounds="false" promptText="Enter Patient Name...">
+            <font>
+               <Font size="18.0" />
+            </font>
+         </TextField>
+         <Button onAction="#onSearchButtonClicked" maxHeight="60.0" maxWidth="180.0" minWidth="180.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="190.0" style="-fx-background-color: #71816D;" text="Search" textAlignment="CENTER" textFill="WHITE" translateX="-115.0">
+            <font>
+               <Font name="System Bold" size="26.0" />
+            </font>
+         </Button>
+         <Label maxHeight="10" fx:id="loadingDeets" style="-fx-font-size: 30px;-fx-font-weight: bold;-fx-text-fill: #E49273;" visible="false" text="Loading..." translateX="100"/>
+      </children>
+      <VBox.margin>
+         <Insets left="50.0" />
+      </VBox.margin>
+      <padding>
+         <Insets left="45.0" />
+      </padding>
+      <opaqueInsets>
+         <Insets />
+      </opaqueInsets>
+   </HBox>
+   <BorderPane maxHeight="500.0" maxWidth="1250.0" minHeight="550.0" minWidth="1250.0" style="-fx-background-color: #EBEBEB;">
+      <center>
+         <TableView fx:id="table" maxHeight="400.0" maxWidth="1150.0" minHeight="450.0" minWidth="400.0" prefHeight="396.0" prefWidth="1250.0" style="-fx-border-color: Black; -fx-background-color: #71816D;" BorderPane.alignment="CENTER">
+         <placeholder>
+         <Label text="Search for a Patient"/>
+         </placeholder>
+           <columns>
+             <TableColumn fx:id="nameColumn" prefWidth="383.01612854003906" style="-fx-border-color: Black;" text="Patient Name" />
+             <TableColumn fx:id="usrnColumn" minWidth="0.0" prefWidth="343.262939453125" style="-fx-border-color: Black;" text="Username" />
+               <TableColumn fx:id="dobColumn" minWidth="0.0" prefWidth="219.39678955078125" style="-fx-border-color: Black;" text="DOB" />
+           </columns>
+            <padding>
+               <Insets bottom="75.0" left="100.0" right="100.0" top="20.0" />
+            </padding>
+         </TableView>
+      </center>
+   </BorderPane>
+
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</VBox>
